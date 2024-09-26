@@ -29,6 +29,7 @@ int main() {
     Product product, updatedProduct;
     Product products[MAX_RECORDS];
     int count;
+    
 
     while (1) {
         printf("\nInventory Management System\n");
@@ -54,6 +55,16 @@ int main() {
             product.category[strcspn(product.category, "\n")] = 0;
             printf("Enter Quantity: ");
             scanf("%d", &product.quantity);
+            // Clear the input buffer if the input is not a number
+            if (product.quantity != 1) {
+                printf("Invalid input. Please enter a number.\n");
+                // Clear the invalid input
+                while (getchar() != '\n'); // Discard invalid input until a newline
+            }
+            else {
+                // Input is valid
+                break; // Exit the loop
+            }
             printf("Enter Price: ");
             scanf("%f", &product.price);
             addProduct(product);
