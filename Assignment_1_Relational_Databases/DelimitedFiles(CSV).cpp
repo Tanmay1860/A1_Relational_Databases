@@ -32,7 +32,7 @@ int main() {
 
     while (1) {
         printf("\nInventory Management System\n");
-        printf("1. Add Product\n");
+        printf("\n1. Add Product\n");
         printf("2. Read Products\n");
         printf("3. Update Product\n");
         printf("4. Delete Product\n");
