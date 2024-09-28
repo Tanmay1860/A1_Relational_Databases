@@ -13,4 +13,12 @@ typedef struct {
     int quantity;
     float price;
 } Product;
+void addProduct(Product product);
+void readProducts();
+void updateProduct(int productId, Product updatedProduct);
+void deleteProduct(int productId);
+int loadProducts(Product products[]);
 
+int menuSequentialAccess() 
+    int choice, id;
+    Product product, updatedProduct;
